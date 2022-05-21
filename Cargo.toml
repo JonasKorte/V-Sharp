@@ -1,2 +1,0 @@
-[workspace]
-members = ["vsharp_compiler", "vsharp_editor"]
