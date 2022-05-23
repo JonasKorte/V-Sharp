@@ -4,6 +4,4 @@ project(VSharp)
 
 set(CXX_STANDARD 23)
 
-add_subdirectory(VSLang)
-
-add_subdirectory(VSEditor)
+add_library(VSLang STATIC id.h id.cpp lexer.h lexer.cpp)
