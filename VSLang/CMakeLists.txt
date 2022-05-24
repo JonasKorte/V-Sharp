@@ -4,4 +4,6 @@ project(VSharp)
 
 set(CXX_STANDARD 23)
 
-add_library(VSLang STATIC id.h id.cpp lexer.h lexer.cpp)
+set(${VSLANG_HEADERS} api.h id.h lexer.h)
+
+add_library(VSLang SHARED id.h id.cpp lexer.h lexer.cpp)

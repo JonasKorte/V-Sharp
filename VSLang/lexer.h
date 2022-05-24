@@ -1,10 +1,13 @@
 #pragma once
+#include "api.h"
+#include "id.h"
+#include <iostream>
 #include <vector>
 #include <string>
 
 namespace VSharp
 {
-    enum TokenType
+    enum VSLANG_API TokenType
     {
         KEYWORD = 0,
         IDENT = 1,
@@ -15,12 +18,14 @@ namespace VSharp
         COMMENT = 6
     };
 
-    struct Token
+    struct VSLANG_API Token
     {
         ID id;
         std::string value;
         TokenType type;
 
     };
-    typedef std::vector<Token> TokenList;
+    typedef VSLANG_API std::vector<Token> TokenList;
+
+    TokenList VSLANG_API analyze(std::string data);
 }
